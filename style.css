@@ -1,0 +1,30 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	height: 100vh;
+	background-color: black;
+	color: white;
+}
+
+main {
+	height: 100vh;
+	display: flex;
+	flex-flow: row;
+}
+
+main div {
+	border: 1px solid white;
+	flex: 1;
+}
+
+main textarea {
+	border: 1px solid blue;
+	background-color: black;
+	color: wheat;
+	width: 100%;
+	height: 100%;
+}
