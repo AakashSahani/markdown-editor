@@ -2,23 +2,15 @@
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="./style.css" />
-		<title>Document</title>
+		<meta name="author" content="Aakash Sahani" />
+		<meta name="description" content="A Full-Stack Markdown Browser" />
+		<meta name="keywords" content="markdown, online markdown" />
+		<link rel="icon" type="image/svg+xml" href="/vite.svg" />
+		<title>Markdown Editor</title>
 	</head>
 	<body>
-		<main>
-			<div class="input" id="input">
-				<textarea
-					name="input"
-					id="markdownInput"
-					cols="30"
-					rows="10"
-				></textarea>
-			</div>
-			<div class="markdown" id="markdown"></div>
-		</main>
-		<script src="./app.js"></script>
+		<main id="root"></main>
+		<script type="module" src="/src/main.tsx"></script>
 	</body>
 </html>

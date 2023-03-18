@@ -1,0 +1,38 @@
+.header {
+	padding: 1rem 2rem;
+}
+
+.header,
+.header nav,
+.header ul,
+.header li,
+.header button {
+	display: flex;
+	flex-flow: row;
+	align-items: center;
+	gap: 0.25rem;
+}
+
+nav {
+	flex: 1;
+	width: 100%;
+	justify-content: space-between;
+}
+
+ul {
+	list-style: none;
+}
+
+li {
+	margin: 0 1rem;
+}
+
+.document_input {
+	display: flex;
+	flex-flow: column;
+	margin: 0 0.5rem;
+}
+
+.header button {
+	padding: 0.5rem;
+}
