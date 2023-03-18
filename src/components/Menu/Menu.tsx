@@ -1,12 +1,8 @@
-import { useEffect, useState } from 'react';
 import menuIcon from '../../assets/icon-menu.svg';
 import style from './Menu.module.css';
+import { MenuProps } from '../Header/Header';
 
-function Menu() {
-	const [menu, setMenu] = useState(false);
-	useEffect(() => {
-		console.log(menu);
-	}, [menu]);
+function Menu({ menu, setMenu }: MenuProps) {
 	return (
 		<form className={style.menu}>
 			<label htmlFor="menu">
@@ -17,7 +13,7 @@ function Menu() {
 				name="menu"
 				id="menu"
 				onChange={() => {
-					setMenu((menu) => !menu);
+					setMenu((menu: Boolean) => !menu);
 				}}
 			/>
 		</form>

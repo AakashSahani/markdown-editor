@@ -1,11 +1,16 @@
 import Menu from '../Menu/Menu';
-import documentIcon from '../../assets/icon-document.svg';
-import deleteIcon from '../../assets/icon-delete.svg';
-import saveIcon from '../../assets/icon-save.svg';
-import style from './Header.module.css';
 import { useState } from 'react';
+import style from './Header.module.css';
+import saveIcon from '../../assets/icon-save.svg';
+import deleteIcon from '../../assets/icon-delete.svg';
+import documentIcon from '../../assets/icon-document.svg';
 
-function Header() {
+export interface MenuProps {
+	menu: Boolean;
+	setMenu: Function;
+}
+
+function Header({ menu, setMenu }: MenuProps) {
 	const [docName, setDocName] = useState('welcome.md');
 	const handleChange = (e: any) => {
 		e.preventDefault();
@@ -23,7 +28,7 @@ function Header() {
 	const handleSave = () => {};
 	return (
 		<header className={style.header}>
-			<Menu />
+			<Menu menu={menu} setMenu={setMenu} />
 			<nav>
 				<ul>
 					<li>Markdown</li>

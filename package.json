@@ -10,6 +10,8 @@
   },
   "dependencies": {
     "@types/marked": "^4.0.8",
+    "html-react-parser": "^3.0.12",
+    "marked": "^4.2.12",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
