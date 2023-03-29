@@ -4,6 +4,9 @@ export interface MarkdownProps {
 }
 
 function MarkdownInput({ markdowninput, setMarkdownInput }: MarkdownProps) {
+	const handleChange = (e: any) => {
+		setMarkdownInput(e.currentTarget.value);
+	};
 	return (
 		<div className="markdown_input">
 			<form>
@@ -13,7 +16,7 @@ function MarkdownInput({ markdowninput, setMarkdownInput }: MarkdownProps) {
 					cols={30}
 					rows={10}
 					value={markdowninput}
-					onChange={(e) => setMarkdownInput(e.currentTarget.value)}
+					onChange={handleChange}
 				></textarea>
 			</form>
 		</div>
