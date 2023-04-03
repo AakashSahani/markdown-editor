@@ -1,6 +1,6 @@
 import menuIcon from '../../assets/icon-menu.svg';
 import style from './Menu.module.css';
-import { MenuProps } from '../Header/Header';
+import { MenuProps } from '../../interfaces/interface';
 
 function Menu({ menu, setMenu }: MenuProps) {
 	return (

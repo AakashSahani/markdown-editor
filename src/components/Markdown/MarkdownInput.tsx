@@ -1,7 +1,4 @@
-export interface MarkdownProps {
-	markdowninput: string;
-	setMarkdownInput: Function;
-}
+import { MarkdownProps } from '../../interfaces/interface';
 
 function MarkdownInput({ markdowninput, setMarkdownInput }: MarkdownProps) {
 	const handleChange = (e: any) => {

@@ -1,16 +1,13 @@
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import { useState, useEffect } from 'react';
+import { MarkdownProps } from '../../interfaces/interface';
 
-export interface MarkdownProps {
-	markdownOutput: string;
-}
-
-function Markdown({ markdownOutput }: MarkdownProps) {
+function Markdown({ markdowninput }: MarkdownProps) {
 	const [markedInput, setMarkedInput] = useState('');
 	useEffect(() => {
-		setMarkedInput(markdownOutput);
-	}, [markdownOutput]);
+		setMarkedInput(markdowninput);
+	}, [markdowninput]);
 
 	return (
 		<div className="markdown_output">

@@ -6,18 +6,34 @@ import Markdown from './components/Markdown/Markdown';
 import MarkdownInput from './components/Markdown/MarkdownInput';
 
 function App() {
-	const [markdowninput, setMarkdownInput] = useState('');
+	const [markdowninput, setMarkdownInput] = useState(``);
+	const [markdownCollection, setMarkdownCollection] = useState([]);
 	const [menu, setMenu] = useState(false);
 	return (
 		<>
-			<Header menu={menu} setMenu={setMenu} />
+			<Header
+				menu={menu}
+				setMenu={setMenu}
+				markdowninput={markdowninput}
+				setMarkdownInput={setMarkdownInput}
+				markdownCollection={markdownCollection}
+				setMarkdownCollection={setMarkdownCollection}
+			/>
 			<section className="">
-				{menu && <Sidebar />}
+				{menu && (
+					<Sidebar
+						markdownCollection={markdownCollection}
+						setMarkdownCollection={setMarkdownCollection}
+					/>
+				)}
 				<MarkdownInput
 					markdowninput={markdowninput}
 					setMarkdownInput={setMarkdownInput}
 				/>
-				<Markdown markdownOutput={markdowninput} />
+				<Markdown
+					markdowninput={markdowninput}
+					setMarkdownInput={setMarkdownInput}
+				/>
 			</section>
 		</>
 	);
